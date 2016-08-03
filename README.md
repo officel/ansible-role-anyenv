@@ -8,6 +8,8 @@ Install & init anyenv.
 
 see: https://github.com/riywo/anyenv
 
+This is install anyenv system wide.
+
 Requirements
 ------------
 
