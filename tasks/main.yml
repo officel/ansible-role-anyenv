@@ -19,7 +19,7 @@
   tags: [anyenv]
 
 - name: force init. for docker?
-  command: /etc/profile.d/anyenv.sh
+  shell: /etc/profile.d/anyenv.sh
   changed_when: false
   tags: [anyenv]
 
