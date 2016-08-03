@@ -18,4 +18,9 @@
     mode:  0755
   tags: [anyenv]
 
+- name: force init. for docker?
+  command: /etc/profile.d/anyenv.sh
+  changed_when: false
+  tags: [anyenv]
+
 # TODO install env
