@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe command('anyenv version') do
-  its(:exit_status) { should eq 0 }
+describe command('anyenv') do
+  its(:stdout) { should match /Usage/ }
 end
 
