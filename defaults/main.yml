@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-role-anyenv
+
+# see: https://github.com/riywo/anyenv/blob/master/README.md#usage
+install_env:
+  - rbenv
+  - rbenv

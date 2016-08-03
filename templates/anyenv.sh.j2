@@ -1,0 +1,3 @@
+export ANYENV_ROOT="{{ anyenv_root | defaults('/opt/anyenv') }}"
+export PATH="{{        anyenv_root | defaults('/opt/anyenv') }}/bin:$PATH"
+eval "$(anyenv init -)"

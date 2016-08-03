@@ -1,0 +1,21 @@
+---
+# tasks file for ansible-role-anyenv
+
+- name: install anyenv
+  git:
+    repo:    "{{ anyenv_repo    | default('https://github.com/riywo/anyenv') }}"
+    dest:    "{{ anyenv_root    | default('/opt/anyenv') }}"
+    version: "{{ anyenv_version | default('HEAD') }}"
+    accept_hostkey: yes
+  tags: [anyenv]
+
+- name: add profile
+  template:
+    src:   anyenv.sh.j2
+    dest:  /etc/profile.d/anyenv.sh
+    owner: root
+    group: root
+    mode:  0755
+  tags: [anyenv]
+
+# TODO install env
