@@ -9,7 +9,7 @@ describe file('/opt/anyenv/envs') do
 end
 
 describe command('ANYENV_ROOT=/opt/anyenv /opt/anyenv/bin/anyenv') do
-  its(:stdout) { should contain('Usage') }
+  its(:stderr) { should contain('Usage') }
 end
 
 describe command('ANYENV_ROOT=/opt/anyenv /opt/anyenv/bin/anyenv versions') do
