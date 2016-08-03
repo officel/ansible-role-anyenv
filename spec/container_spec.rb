@@ -12,4 +12,8 @@ describe command('anyenv') do
   its(:stdout) { should match /Usage/ }
 end
 
+describe command('anyenv versions') do
+  its(:stdout) { should match /rbenv/ }
+  its(:stdout) { should match /pyenv/ }
+end
 
