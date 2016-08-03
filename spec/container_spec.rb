@@ -9,11 +9,11 @@ describe file('/opt/anyenv/envs') do
 end
 
 describe command('/opt/anyenv/bin/anyenv') do
-  its(:stdout) { should match /Usage/ }
+  its(:stdout) { should contain('Usage') }
 end
 
 describe command('/opt/anyenv/bin/anyenv versions') do
-  its(:stdout) { should match /rbenv/ }
-  its(:stdout) { should match /pyenv/ }
+  its(:stdout) { should contain('rbenv') }
+  its(:stdout) { should contain('pyenv') }
 end
 
