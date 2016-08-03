@@ -23,10 +23,10 @@
   changed_when: false
   tags: [anyenv]
 
-# TODO install env
-
 - name: install xxenv
   shell: "ANYENV_ROOT={{ anyenv_root | default('/opt/anyenv') }} {{ anyenv_root | default('/opt/anyenv') }}/bin/anyenv install {{ item }}"
+  args:
+    creates: "{{ anyenv_root | default('/opt/anyenv') }}/envs/{{ item }}"
   changed_when: false
   with_items: "{{ install_env }}"
   tags: [anyenv]
