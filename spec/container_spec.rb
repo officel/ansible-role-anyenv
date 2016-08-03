@@ -8,11 +8,11 @@ describe file('/opt/anyenv/envs') do
   it { should be_directory }
 end
 
-describe command('anyenv') do
+describe command('/opt/anyenv/bin/anyenv') do
   its(:stdout) { should match /Usage/ }
 end
 
-describe command('anyenv versions') do
+describe command('/opt/anyenv/bin/anyenv versions') do
   its(:stdout) { should match /rbenv/ }
   its(:stdout) { should match /pyenv/ }
 end
