@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe command('anyenv') do
-  its(:stdout) { should match /Usage/ }
+describe command('which anyenv') do
+  its(:stdout) { should match /anyenv/ }
 end
 
